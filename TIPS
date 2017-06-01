@@ -1,0 +1,26 @@
+TIPS
+
+1. To cite a reference, use \cite{refname}.
+   (There must be a corresponding entry with refname in refs.bib.)
+
+2. To add a reference, use google to find its BibTeX entry, and add it
+   to the file refs.bib.  Make sure to modify it if needed so that it is
+   consistent with the rest of the entries.  You should most probably
+   change its identifier (first field), to something easier-to-remember.
+
+3. Use \topic{topic name} in the exercises to highlight use of a certain
+   topic (this also places it in the index).
+   Use ! to introduce sub-topics:
+   \topic{induction!mutual}
+   It's best to put these commands on a new line each,
+   and end each such line with a comment, like that:
+   \topic{set theory}%
+   \topic{cardinality}%
+
+4. Define your personal macros in a the file TEACHERmac.tex,
+   where TEACHER is your teacher handle.
+   These macros will only be available to YOUR lesson files.
+
+5. Define general math macros in mathmac.tex.
+   They will be available to everyone.
+

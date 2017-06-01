@@ -1,0 +1,72 @@
+\usepackage{ifthen}
+\usepackage{etoolbox}
+\usepackage{environ}
+\usepackage{xspace}
+\usepackage{stringstrings}
+\usepackage{datetime2}
+\DTMsetstyle{iso}
+\edef\compiletime{\DTMnow}
+\newwrite\compiletimefile
+\openout\compiletimefile=\jobname.compiletime
+\write\compiletimefile{\compiletime}
+\closeout\compiletimefile
+\usepackage[colorlinks]{hyperref}
+\hypersetup{
+    citecolor = {citecolor}
+}
+\usepackage{tikz}
+\usepackage[
+  backend=bibtex8,
+  style=alphabetic,
+  url=true,
+  doi=true,
+]{biblatex}
+\usepackage{xcolor}
+\definecolor{citecolor}{rgb}{0,0.5,0.25}
+\definecolor{homeworkcolor}{rgb}{0.2,0.0,0.6}
+
+% layout
+\settocdepth{section}
+\setsecnumdepth{chapter}
+\def\semester#1{\chapter{#1}}
+\def\signature#1{\begin{flushright}\itshape#1\end{flushright}}
+% make section numbers stick out to the left
+\makeatletter
+\def\@seccntformat#1{\protect\makebox[0pt][r]{\csname the#1\endcsname\quad}}
+\makeatother
+
+% refs
+
+% index
+\def\topic#1{\index{#1}\xspace}
+
+% define lesson on a per-teacher basis
+\newenvironment{lesson}[1]
+  {\begin{section}{#1}}
+  {\end{section}}
+\def\defteacher#1#2#3{%
+  \newtoggle{show#1}
+  \toggletrue{show#1}
+  \NewEnviron{#1}[1]
+  {%
+    \iftoggle{show#1} {%
+      %\newpage
+      \begin{lesson}{##1 (\capitalize{#1})}%
+        \InputIfFileExists{content/#1mac}{}{}%
+        \BODY%
+      \end{lesson}
+    }{}
+  }
+}
+
+\def\notesname{Notes}
+
+% notes
+\newenvironment{notes}
+    {\bigskip\begin{center}\large\bfseries\notesname\end{center}\endgraf}
+    {}
+
+\input{teacherlist}
+
+% math macros
+\include{mathmac}

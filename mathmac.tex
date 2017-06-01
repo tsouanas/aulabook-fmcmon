@@ -1,0 +1,130 @@
+% math-related macros
+
+% required packages
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+
+% define theorem-like environments
+\newtheoremstyle{homework}
+  {0.5em}% measure of space to leave above the theorem. E.g.: 3pt
+  {0.5em}% measure of space to leave below the theorem. E.g.: 3pt
+  {\color{homeworkcolor}}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\color{homeworkcolor}\bfseries}% name of head font
+  {.}% punctuation between head and body
+  { }% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+\theoremstyle{definition}
+\newtheorem {exercise}              {Exercise}  [chapter]
+\newtheorem {definition}[exercise]  {Definição} 
+\newtheorem {problem}   [exercise]  {Problem}   
+\newtheorem {question}  [exercise]  {Problem}   
+\theoremstyle{plain}
+\newtheorem {theorem}   [exercise]  {Theorem}   
+\newtheorem {lemma}     [exercise]  {Lemma}     
+\theoremstyle{homework}
+\newtheorem {homework}              {Homework}  [chapter]
+
+% definitions
+\def\dterm#1{\textsl{#1}}
+
+% standard sets
+\def\nats   {{\mathbb N}}
+\def\rats   {{\mathbb Q}}
+\def\ints   {{\mathbb Z}}
+\def\reals  {{\mathbb R}}
+\def\complex{{\mathbb C}}
+\def\bools  {{\mathbb B}}
+
+% generic tools
+\def\ensuremath#1{\ifmmode#1\else$#1$\fi}
+%\def\eqvdots{\mathmakebox[\widthof{${}={}$}][c]{\vdots}}
+\def\eqvdots{\ \ \vdots}
+\def\eqtype{\mathrel{\,\,\kern-.05em:\,}}
+
+% elementary math
+\def\abs#1{\left|#1\right|}
+\def\sizeof#1{\left|#1\right|}
+\def\frac#1#2{{#1\over#2}}
+\def\ntimes{\mathbin{\cdot}}
+\def\stimes{\,}
+\def\floor#1{\left\lfloor#1\right\rfloor}
+\def\ceil#1{\left\lceil#1\right\rceil}
+\def\cancel#1{\tikz[baseline] \node [strike out,draw,anchor=text,inner sep=0pt,text=black]{$#1$};}
+
+% combinatorics
+\def\arrange#1{Arr(#1)}
+\def\perm#1#2{P(#1,#2)}
+\def\comb#1#2{C(#1,#2)}
+\def\binom#1#2{{{#1} \choose {#2}}}
+
+% set theory
+\def\intersection{\cap}
+\let\isect=\intersection
+\def\Intersection{\bigcap}
+\let\Isect=\Intersection
+\def\union{\cup}
+\def\Union{\bigcup}
+\def\symdiff{\triangle}
+\def\powerset{{\wp}}
+\let\pset=\powerset
+\def\univ{U}
+\def\surjto{\rightarrow\mathrel{\kern-.8em}\rightarrow}
+\def\injto{\rightarrowtail}
+\def\bijto{\injto\mathrel{\kern-.8em}\rightarrow}
+
+% more set theory
+\def\continuum{\euf{c}}
+\def\finord#1{\overline{#1}}
+\def\eqc{\mathrel{=_{\namedop{c}}}}
+\def\neqc{\mathrel{\not\eqc}}
+\def\leqc{\mathrel{\leq_{\namedop{c}}}}
+\def\geqc{\mathrel{\geq_{\namedop{c}}}}
+\def\gtc{\mathrel{>_{\namedop{c}}}}
+\def\ltc{\mathrel{<_{\namedop{c}}}}
+
+
+% number theory
+\def\divides{\mathrel{\mid}}
+\def\divideseqwidth{\;\mathrel{\mid}\;}
+\let\divs=\divides
+\let\knuthcong=\cong
+\let\knuthncong=\ncong
+\def\cong{\equiv}
+\def\ncong{\mathrel{\not\equiv}}
+\def\congmod#1#2{#1\quad(\mod {#1})}
+\def\modulo#1{\left(\mod{#1}\right)}
+\def\ndivides{\mathrel{\nmid}}
+\def\gengcd#1{\mathopen{\text{\rm gcd}(}#1\mathclose{)}}
+\def\genlcm#1{\mathopen{\text{\rm lcm}(}#1\mathclose{)}}
+\def\gcd#1#2{\left(#1,#2\right)}
+\def\lcm#1#2{\left[#1,#2\right]}
+\def\totsym{\varphi}
+\def\tot#1{\mathopen{\totsym}\left({#1}\right)\mathclose{}}
+
+% logic metalang
+%\def\iffdf{\mathrel{\overset\triangle\iff}}
+\def\iffdf{\mathrel{{\buildrel{\text{\sixss def}} \over {\iff}}}}
+\def\iffpseudodf{\mathrel{{\buildrel{\text{\sixss ``def''}} \over {\iff}}}}
+\def\iffask{\mathrel{{\buildrel{\text{?}} \over {\iff}}}}
+\def\letiff{\mathrel{\;:\Longleftrightarrow \;}}
+\def\eqdf{\mathrel{{\buildrel{\text{\sixss def}} \over {=}}}}
+\def\eqpseudodf{\mathrel{{\buildrel{\text{\sixss ``def''}} \over {=}}}}
+\def\askeq{\mathrel{{\buildrel{\text?} \over {=}}}}
+\def\eqass{\mathrel{:=}}
+\def\asseq{\mathrel{=:}}
+\let\leteq=\eqass
+\let\eqlet=\asseq
+\def\mland{\mathbin{\;\&\;}}
+\def\mlor{\mathbin{\;\text{\rm or}\;}}
+\def\nimplies{\smartnot\implies}
+\def\lrdir{``$\Rightarrow$''}
+\def\rldir{``$\Leftarrow$''}
+\def\bidir{``$\Leftrightarrow$''}
+
+% complex numbers
+\def\modulus#1{\left|#1\right|}

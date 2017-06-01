@@ -1,0 +1,58 @@
+\topic{teoria de números!divisão de Euclides}
+\begin{definition}[Divisão de Euclides]
+\label{ediv}
+\topic{teoria de números!divisão de Euclides}%
+    Dados inteiros $a$ e $b$ com $b > 0$, existem inteiros $q$ e $r$ tais que
+    $$
+        a = bq + r, \qquad 0 \leq r < b.
+    $$
+    Além disso, os $q$ e $r$ são determinados unicamente.
+\end{definition}
+
+\begin{exercise}
+\topic{teoria de números!divisão de Euclides}%
+    Prove a unicidade dos $q$ e $r$.
+\end{exercise}
+
+\begin{exercise}
+\topic{teoria de números!divisão de Euclides}%
+    Se $a, b\in\ints$ com $b > 0$, então $(a,b) = (b,r)$, onde $r$ é o resto da divisão de $a$ por $b$.
+\end{exercise}
+
+\topic{teoria de números!algoritmo de Euclides}[Algoritmo de Euclides]
+\begin{definition}
+\label{ealg}
+\topic{teoria de números!algoritmo de Euclides}%
+    Sejam $a, b$ inteiros positivos. Para encontrar o $\gcd a b$, aplicamos a \emph{Divisão de Euclides} (\ref{ediv}) repetidamente até chegar em resto 0. O $\gcd a b$ será igual ao último resto diferente de 0 que foi obtido.
+    \begin{itemize}[--]
+        \item Por que o \emph{Algoritmo de Euclides} sempre termina? 
+    \end{itemize}
+\end{definition}
+
+\begin{exercise}
+\label{egcd}
+\topic{teoria de números!algoritmo de Euclides}%
+    Usando o \emph{Algoritmo de Euclides} (\ref{ealg}), encontre o $\gcd {101} {73}$.
+\end{exercise}
+
+\begin{definition}[Algoritmo Estendido de Euclides]
+\topic{teoria de números!algoritmo de Euclides!estendido}%
+    O máximo divisor comum $\gcd a b$ de dois inteiros $a$ e $b$ pode ser escrito como uma combinação linear de $a$ e $b$. Usamos o \emph{Algoritmo Estendido de Euclides} para encontrar os inteiros $s, t\in\ints$ que satisfazem a
+    $$
+        \gcd a b = as + bt.
+    $$
+\end{definition}
+
+\begin{exercise}
+\topic{teoria de números!algoritmo de Euclides!estendido}%
+    Continuando o \ref{egcd}, encontre $t,s\in\ints$ tais que
+    $$
+        \gcd {101} {73} = 101t + 73s.
+    $$
+\end{exercise}
+
+\begin{homework}
+\topic{teoria de números!algoritmo de Euclides}%
+    Prove a corretude do \emph{Algoritmo de Euclides} (\ref{ealg}).
+\end{homework}
+

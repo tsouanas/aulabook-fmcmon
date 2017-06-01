@@ -1,0 +1,87 @@
+\begin{definition}[Inverso módulo $m$]% para dor nomes em teoremas/definições bota em []
+    Sejam $a,a',m\in\ints$. Chamamos $a'$ o inverso (multiplicativo) de $a$ módulo $m$ sse
+    $$
+        aa'\cong 1\pmod m.
+    $$
+    \begin{itemize}[--]
+        \item O inverso é único;
+        \item O $a$ tem inverso módulo $m$ sse $\gcd a b = 1.$
+    \end{itemize}
+\end{definition}
+
+\begin{exercise}
+\topic{congruência}
+    Prove a unicidade do inverso módulo $m$. 
+\end{exercise}
+
+\begin{exercise}
+\topic{congruence!chinese remainder theorem}
+    Usando o Teorema Chinês do Resto, ache todos os inteiros $x\in\ints$ que satisfazem o sistema de congruências:
+    \begin{align*}
+        x&\cong 2\pmod 9\\
+        x&\cong 1\pmod 5\\
+        x&\cong 2\pmod 4
+    \end{align*}
+\end{exercise}
+
+\begin{exercise}
+\topic{congruência!teorema!Chinês do resto}
+    Ache todos os inteiros $x\in\ints$ com $\abs x < 64$ que satisfazem o sistema de congruências:
+    \begin{align*}
+        x &\cong 1\pmod 3\\
+        3x&\cong 1\pmod 4\\
+        4x&\cong 2\pmod 5
+    \end{align*}
+\end{exercise}
+
+\begin{homework}
+\topic{congruência!teorema!Chinês do resto}
+    Use o Teorema Chinês do Resto para resolver os sistemas de congruências:
+    % vou mudar isso tambem, principalmente para ter como referencia
+    $$
+    \text{(a)}
+    \left\{
+            \begin{aligned}
+                x&\cong 1\pmod 3\\
+                x&\cong 2\pmod 5\\
+                x&\cong 3\pmod 7
+            \end{aligned}
+    \right.
+    \qquad
+    \underbrace{
+    \underbrace{
+            \begin{aligned} % o align* abre sozinho math-mode
+                x&\cong 2\pmod 4\\
+                x&\cong 3\pmod 5\\
+                x&\cong 4\pmod 9\\
+                x&\cong 5\pmod {13}
+            \end{aligned}
+        }_{\text{(b)}}
+    \qquad
+    \overbrace{
+            \begin{aligned}
+                x&\cong 3\pmod 4\\
+               5x&\cong 1\pmod 7\\
+                x&\cong 2\pmod 9
+            \end{aligned}
+        }^{\text{(c)}} % (como nao deu erro sem o \text, ele aceitou o \pmod, ou seja, esta em math-mode by default, por isso o \text{} aqui)
+    }_{\text{dica: comeca com essas}}
+    $$
+    % e mais um jeito
+    % veja os dois e escolhe um
+    % mais um tip: o \phantom{..} creates a "phantom" text (invisible)
+    % it's useful here to align the pmods that are on colums with two digits
+    % like the second column here...
+    % if i place 04, 05, 09, etc. it's ugly as fuck, so i'll put the 0 in a \phantom
+    \begin{align*}
+        x&\cong 1\pmod 3 &    x&\cong 2\pmod {\phantom04}  &   x&\cong 3\pmod 4\\
+        x&\cong 2\pmod 5 &    x&\cong 3\pmod {\phantom05}  &  5x&\cong 1\pmod 7\\
+        x&\cong 3\pmod 7 &    x&\cong 4\pmod {\phantom09}  &   x&\cong 2\pmod 9\\
+         &               &    x&\cong 5\pmod {13} 
+    \end{align*}
+    % vamo compilar
+\end{homework}
+
+\begin{homework}
+    Encontre o menor inteiro positivo que deixa os restos $8$, $7$ e $11$ quando dividido por $7$, $11$ e $15$, respectivamente.
+\end{homework}
