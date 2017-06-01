@@ -9,6 +9,8 @@
 *.log
 *.out
 *.pdf
+*.toc
 *.run.xml
 *.compiletime
+aulalist.tex
 report.html
