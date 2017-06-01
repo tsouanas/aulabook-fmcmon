@@ -1,7 +1,6 @@
 #!/bin/sh
 
-FMCSITEROOT=/sites/fmc.imd.ufrn.br/root
-REPORTOUT=$FMCSITEROOT/report/index.html
+REPORTOUT=./report.html
 TMPSTU=./tmp.stu
 CONTENTDIR=content
 

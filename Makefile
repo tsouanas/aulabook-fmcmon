@@ -3,11 +3,12 @@ all: aulabook report
 aulabook:
 	sh mkaulabook.sh
 
-upload:
-	scp aulabook.pdf fmc.imd.ufrn.br:fmcmonsite/aulabook/
-
 report:
 	sh mkreport.sh
+
+upload:
+	scp aulabook.pdf fmc.imd.ufrn.br:fmcmonsite/aulabook/
+	scp report.html fmc.imd.ufrn.br:fmcmonsite/report/index.html
 
 clean:
 	rm -f aulabook.{aux,bbl,bcf,blg,idx,ilg,ind,log,out,toc,run.xml}
