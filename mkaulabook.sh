@@ -9,6 +9,12 @@ ENGINE=xelatex
 SEMESTERPATTERN=????.?
 AULAPATTERN=????????.*.tex
 
+# check that engine exists
+command -v $ENGINE
+if [ $? -ne 0 ]; then
+    echo "Engine '$ENGINE' not found.  Either install it or switch to a different engine."
+    exit 2
+fi
 
 # create new AULALIST file
 echo -n > $AULALIST
