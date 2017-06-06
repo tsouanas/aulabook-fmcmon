@@ -1,6 +1,6 @@
 all: aulabook report
 
-aulabook:
+aulabook: clean
 	sh mkaulabook.sh
 
 report:
