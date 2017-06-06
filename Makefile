@@ -7,7 +7,7 @@ report:
 	sh mkreport.sh
 
 upload:
-	cut -f1 -d\\ aulabook.compiletime >> aulabook.compiletime.txt
+	cut -f1 -d\\ aulabook.compiletime > aulabook.compiletime.txt
 	scp aulabook.{pdf,count,compiletime.txt} fmc.imd.ufrn.br:fmcmonsite/aulabook/
 	scp report.html fmc.imd.ufrn.br:fmcmonsite/report/index.html
 
