@@ -11,6 +11,7 @@
 *.pdf
 *.toc
 *.run.xml
-*.compiletime
+*.compiletime*
+*.count
 aulalist.tex
 report.html
