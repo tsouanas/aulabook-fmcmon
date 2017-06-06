@@ -1,4 +1,5 @@
 \usepackage{ifthen}
+%\usepackage{newfile}
 \usepackage{etoolbox}
 \usepackage{environ}
 \usepackage{xspace}
@@ -41,8 +42,9 @@
 \def\topic#1{\index{#1}\xspace}
 
 % define lesson on a per-teacher basis
+\newcounter{lessoncount}
 \newenvironment{lesson}[1]
-  {\begin{section}{#1}}
+  {\stepcounter{lessoncount}\begin{section}{#1}}
   {\end{section}}
 \def\defteacher#1#2#3{%
   \newtoggle{show#1}
@@ -70,3 +72,11 @@
 
 % math macros
 \include{mathmac}
+
+% write aula count
+\def\writeaulacount{%
+\newwrite\countfile
+\openout\countfile=\jobname.count
+\write\countfile{\thelessoncount}
+\closeout\countfile
+}
