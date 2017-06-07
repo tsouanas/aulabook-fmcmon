@@ -52,8 +52,7 @@
   \NewEnviron{#1}[1]
   {%
     \iftoggle{show#1} {%
-      %\newpage
-      \begin{lesson}{##1\relax\quad(\capitalize{#1})}%
+      \begin{lesson}{{##1}~~(\capitalize{#1})}%
         \InputIfFileExists{content/#1mac}{}{}%
         \BODY%
       \end{lesson}
