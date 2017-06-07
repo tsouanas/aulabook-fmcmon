@@ -52,7 +52,10 @@ for sem in $CONTENTDIR/$SEMESTERPATTERN; do
         echo "Processing aula $aula."
         lessondir=`echo $aula | cut -f3 -d/ | cut -f1 -d.`
         teacher=`echo $aula | cut -f3 -d/ | cut -f2 -d.`
-        lessondate=`echo $lessondir | awk '{ print substr($0,7,2) "-" substr($0,5,2) "-" substr($0,0,4); }'`
+        lessony=`echo $lessondir | cut -b '1-4'`
+        lessonm=`echo $lessondir | cut -b '5-6'`
+        lessond=`echo $lessondir | cut -b '7-8'`
+        lessondate="${lessond}/${lessonm}/${lessony}"
         echo -n "\\\\begin{$teacher}" >> $AULALIST
         echo    "{$lessondate}"       >> $AULALIST
         echo    "\\\\input{$aula}"    >> $AULALIST
