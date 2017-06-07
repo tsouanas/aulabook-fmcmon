@@ -21,4 +21,5 @@ clean:
 cleanall: clean
 	rm -f aulabook.pdf
 	rm -f aulabook.compiletime.txt
+	rm -f report.txt
 
