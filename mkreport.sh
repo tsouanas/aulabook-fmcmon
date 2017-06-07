@@ -1,13 +1,13 @@
 #!/bin/sh
 
-REPORTOUT=./report.html
+REPORTOUT=./report.txt
 TMPSTU=./tmp.stu
 CONTENTDIR=content
 
 umask 002
 
-# <pre>...
-echo "<pre style='font-family:monospace;font-size:1.5em;'>" > $REPORTOUT
+# clear file
+echo -n > $REPORTOUT
 
 # general lessons report
 echo -n > $TMPSTU
@@ -43,7 +43,4 @@ attcount=`cat $TMPSTU| wc -l | awk '{ print $1 }'`
 stucount=`cat $TMPSTU|sort|uniq| wc -l | awk '{ print $1 }'`
 echo "$stucount students have been attended during our office hours so far, $attcount times in total." | tee -a $REPORTOUT
 rm -f $TMPSTU
-
-# ...</pre>
-echo "</pre>" >> $REPORTOUT
 

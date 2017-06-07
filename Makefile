@@ -9,7 +9,7 @@ report:
 upload:
 	cut -f1 -d\\ aulabook.compiletime > aulabook.compiletime.txt
 	scp aulabook.pdf aulabook.count aulabook.compiletime.txt fmc.imd.ufrn.br:fmcmonsite/aulabook/
-	scp report.html fmc.imd.ufrn.br:fmcmonsite/report/index.html
+	scp report.txt fmc.imd.ufrn.br:fmcmonsite/report/report.txt
 
 clean:
 	rm -f aulabook.{aux,bbl,bcf,blg,idx,ilg,ind,log,out,toc,run.xml}
