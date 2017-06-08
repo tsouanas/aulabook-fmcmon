@@ -3,7 +3,7 @@
 AULALIST=aulalist.tex
 CONTENTDIR=content
 AULABOOKNAME=aulabook
-ENGINE=xelatex
+ENGINE=pdflatex
 
 # patterns
 SEMESTERPATTERN=????.?
