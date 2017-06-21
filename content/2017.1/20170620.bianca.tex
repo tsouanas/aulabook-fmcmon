@@ -1,0 +1,29 @@
+\begin{definition}[Isomorfismo de ordem]
+\topic{posets!isomorfismo de ordem}
+	Dizemos que $P$ e $Q$ são isomorfos de ordem se existe um mapeamento bijetivo $\varphi$ de $P$ para $Q$ tal que $x \leq y$ em $P$ se e somente se $\varphi(x) \leq \varphi(y)$ em $Q$.
+\end{definition}
+	
+\begin{definition}[A relação de cobertura]
+\topic{posets!cobertura}
+	Seja $P$ um poset e sejam $x, y \in P$. Dizemos que $x$ é coberto por $y$, e escrevemos $x \covby y$, se $x < y$ e $x \leq z < y$ implica $z = x$.
+\end{definition}
+
+\begin{exercise}
+\topic{posets}
+	Sejam P e Q posets finitos e seja ${\varphi}:P \to Q$ um mapeamento bijetivo. Então, os seguintes são equivalentes:
+	\begin{enumerate}[(i)]
+		\item $\varphi$ é um isomorfismo de ordem;
+		\item $x < y$ em $P$ se e somente se $\varphi(x) < \varphi(y)$ em $Q$;
+		\item $x \covby y$ em $P$ se e somente se $\varphi(x) \covby \varphi(y)$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+\topic{posets}
+	Dois posets finitos $P$ e $Q$ são isomorfos de ordem se e somente se podem ser desenhados com diagramas idênticos.
+\end{exercise}
+
+\begin{exercise}
+\topic{posets}
+	Existe uma lista de $16$ diagramas de posets de quatro elementos, tal que todo poset de quatro elementos pode ser representado por um dos diagramas nessa lista. Encontre essa lista.
+\end{exercise}
