@@ -1,0 +1,58 @@
+\begin{exercise}
+\topic{indução}
+	Algumas definições de funções recursivas são:
+	$$
+		\left.
+			\begin{aligned}
+				x + 0 = x \quad \text{(a1)}\\
+				x + Sy = S(x + y) \quad \text {(a2)}
+			\end{aligned}
+		\right.
+		\qquad
+		\left.
+			\begin{aligned}
+				x^0 = S0 \quad \text{(e1)}\\
+				x^{Sy} = x^y \cdot x \quad \text{(e2)}
+			\end{aligned}
+		\right.
+	$$
+	$$
+		\left.
+			\begin{aligned}
+				x \cdot 0 = 0 \quad \text{(m1)}\\
+				x \cdot Sy = (x \cdot y) + x \quad \text{(m2)}
+			\end{aligned}
+		\right.
+		\qquad
+		\left.
+			\begin{aligned}
+				x \Uparrow 0 = S0 \quad \text{(t1)}\\
+				x \Uparrow Sy = x^{x \Uparrow y} \quad \text{(t2)}
+			\end{aligned}
+		\right.
+	$$
+
+	\begin{enumerate}[(a)]
+		\item Calcule o valor $ 2 \Uparrow 4 $.
+		\item Dados os lemas:
+			$$
+				\left.
+					\begin{aligned}
+						a + b = b + a \qquad \text{(a-com)}\\
+						a \cdot (b \cdot c) = (a \cdot b) \cdot c \qquad \text{(m-ass)}
+					\end{aligned}
+				\right.
+			$$
+		prove por indução as seguintes propriedades, indicando para cada passo o que foi usado:
+			$$
+				\text{(i)}
+					\quad a \cdot S0 = a
+				\qquad
+				\text{(ii)}
+					\quad a^{x + y} = a^x \cdot a^y
+				\qquad
+				\text{(iii)}
+					\quad a^{x \cdot y} = (a^x)^{y}.
+			$$
+	\end{enumerate}
+\end{exercise}
