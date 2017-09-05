@@ -1,23 +1,29 @@
+\def\List#1{{\mathcal L}_{#1}}
+\def\append{{\mathit {append}}}
+\def\reverse{{\mathit {reverse}}}
+\def\id{{\mathit {id}}}
+
 \begin{exercise}
 \label{lists-def}
 \topic{listas}
 \topic{bnf}
-Defina o conjunto $\mathcal{L}_A$ das listas de elementos de um tipo A usando BNF.
+Defina o conjunto $\List A$ das listas de elementos de um tipo $A$ usando BNF.
 \end{exercise}
 
 \begin{exercise}
 \topic{listas}
 \topic{recursão}
-Defina a operação $append: \mathcal{L}_A \times \mathcal{L}_A \to \mathcal{L}_A$ de concatenação de duas listas. 
+Defina a operação $\append: \List A \times \List A \to \List A$ de concatenação de duas listas.
 \end{exercise}
 
 \begin{exercise}
 \topic{provas!indução}
-Demonstre que a $append$ definida no exercício anterior é associativa.
+Demonstre que a $\append$ definida no exercício anterior é associativa.
 \end{exercise}
 
 \begin{homework}
 \topic{listas}
 \topic{recursão}
-Defina a operação $reverse: \mathcal{L}_A \to \mathcal{L}_A$, que faz a inversão de uma lista. Prove que $reverse$ é involutiva, ou seja, que $reverse \circ reverse = id$.
+Defina a operação $\reverse: \List A \to \List A$, que faz a inversão de uma lista.
+Prove que $\reverse$ é involutiva, ou seja, que $\reverse\of\reverse = \id$.
 \end{homework}
