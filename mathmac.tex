@@ -66,11 +66,15 @@
 \def\set#1{\left\{#1\right\}}
 \def\st{\;\mathord{\pmb{\mid}}\;}
 \def\setst#1#2{\set{#1 \ \st\  #2}}
+\def\setstt#1#2{\set{#1 \ \st\  \text{#2}}} % textmode in filter
 \def\setlst#1#2{\set{#1 \ \;\middle|\;\  #2}} % sufficiently long such that
+\def\card#1{\left|#1\right|} % cardinality
 \def\intersection{\cap}
 \let\isect=\intersection
 \def\Intersection{\bigcap}
 \let\Isect=\Intersection
+\let\inter=\intersection
+\let\Inter=\Intersection
 \def\union{\cup}
 \def\Union{\bigcup}
 \def\symdiff{\triangle}
@@ -81,6 +85,40 @@
 \def\injto{\rightarrowtail}
 \def\bijto{\injto\mathrel{\kern-.8em}\rightarrow}
 \def\sset#1#2{\langle{#1}\mathrel{;}{#2}\rangle}
+\def\fsset#1{\{#1\}}% fixed-size set
+\def\bigset#1{{\mathopen{\big\{}{#1}\mathclose{\big\}}}}% forced big-size set
+\def\tup#1{\left<#1\right>}
+\def\paren#1{{\left({#1}\right)}}
+\def\lparen#1{{\left({#1}_{\vphantom ,}\right)}}% smart-large parens XXX
+\def\bigparen#1{{\mathopen{\big(}{#1}\mathclose{\big)}}}% forced big-size parens
+\def\biggparen#1{{\mathopen{\bigg(}{#1}\mathclose{\bigg)}}}% forced bigg-size parens
+\def\bracket#1{{\left[\shave{#1}\right]}}
+\def\symdiff{\mathbin{\triangle}}
+\def\surjto{\mathrel{\rightarrow\mkern-15mu\rightarrow}}
+\let\surto=\surjto
+\def\injto{\mathrel{\rightarrowtail}}
+\def\bijto{\mathrel{\injto\mkern-15mu\rightarrow}}
+\def\parto{\mathrel{\rightharpoonup}}
+\def\toarrow#1{\mathrel{\decorateover{#1}{\longrightarrow}}}
+\def\fromarrow#1{\mathrel{\decorateover{#1}{\longleftarrow}}}
+\def\compose{\circ}
+\def\fcompose{\circ}
+\def\rcompose{\circ}
+\let\rcom=\rcompose
+\let\fcom=\fcompose
+\let\com=\compose
+\def\eqclass#1#2{[\mathord{#1}\mathord{/}\mathord{#2}]}
+\def\eqclassimp#1{[#1]}
+\def\quotset#1#2{\mathord{#1}\mathord{/}\mathord{#2}}
+\def\funimg#1#2{#1[#2]}
+\def\funpreimg#1#2{#1^{-1}[#2]}
+\let\img=\funimg
+\let\pre=\funpreimg
+\let\rel=\mathrel
+\let\of=\fcompose
+\let\following=\compose
+\def\resto{\mathbin{\mkern-2mu\upharpoonright\mkern-1mu}}
+\def\lam#1#2{\lambda\,{#1}\,.\,{#2}}
 
 % order theory
 \def\covby{\mathrel{-\mkern-4mu}<}
