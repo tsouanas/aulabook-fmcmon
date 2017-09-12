@@ -44,8 +44,8 @@
 \def\nonzero#1{{#1_*}}
 \def\nonpos#1{{#1^-}}
 \def\nonneg#1{{#1^+}}  
-\def\pos {{\nonneg{\nonzero#1}}}
-\def\neg {{\nonpos{\nonzero#1}}}
+\def\pos#1{{\nonneg{\nonzero#1}}}
+\def\neg#1{{\nonpos{\nonzero#1}}}
 
 % generic tools
 \def\ensuremath#1{\ifmmode#1\else$#1$\fi}
