@@ -1,0 +1,16 @@
+\begin{exercise}
+\topic{indução}
+	Considere a função recursiva $\alpha : \nats^2 \to \nats$ definida pelas equações:
+	$$
+		\begin{aligned}
+			\alpha (0, x) &= x + 1 &&\text{(K1)}\\
+			\alpha (n + 1, 0) &= \alpha (n, 1) &&\text{(K2)}\\
+			\alpha (n + 1, x + 1) &= \alpha (n, \alpha (n + 1, x)) &&\text{(K3)}
+		\end{aligned}
+	$$
+	\begin{enumerate}[(i)]
+		\item Seguindo as definições recursivas, calcule os valores $\alpha (1, 1)$ e $\alpha (2, 1)$.
+		\item Prove que para todo $x \in \nats$, $\alpha (1, x) = x + 2$.
+		\item Prove que para todo $x \in \nats$, $\alpha (2, x) = 2x + 3$.
+	\end{enumerate}
+\end{exercise}
