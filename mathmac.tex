@@ -41,9 +41,9 @@
 \def\bools  {{\mathbb B}}
 
 % variations of number sets
-\def\nonzero#1{{#1_*}}
-\def\nonpos#1{{#1^-}}
-\def\nonneg#1{{#1^+}}  
+\def\nonzero#1{{#1^*}}
+\def\nonpos#1{{#1_-}}
+\def\nonneg#1{{#1_+}}  
 \def\pos#1{{\nonneg{\nonzero#1}}}
 \def\neg#1{{\nonpos{\nonzero#1}}}
 
@@ -120,6 +120,7 @@
 \def\quotset#1#2{\mathord{#1}\mathord{/}\mathord{#2}}
 \def\funimg#1#2{#1[#2]}
 \def\funpreimg#1#2{#1^{-1}[#2]}
+\def\inv#1{#1^{-1}}
 \let\img=\funimg
 \let\pre=\funpreimg
 \let\rel=\mathrel
