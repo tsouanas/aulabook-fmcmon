@@ -1,0 +1,43 @@
+\begin{exercise}
+	Denotamos por $\mathbb{B}^*$ como o conjunto de todas as palavras binárias.
+	Uma definição recursiva para esse conjunto é a seguinte:
+	\[ \mathbb{B}^* ::= \lambda \;\vert\; \mathbb{B}^*\;\!0 \;\vert\; \mathbb{B}^*\;\!1 \]
+
+	Definimos também uma operação de concatenação para esse conjunto, dada por
+	$\cdot : \mathbb{B}^* \times \mathbb{B}^* \to \mathbb{B}^*$
+	onde
+	\begin{enumerate}
+		\item $x \cdot \lambda = x$
+		\item $x \cdot (w0) = (x \cdot w)0$
+		\item $x \cdot (w1) = (x \cdot w)1$
+	\end{enumerate}
+
+	Mostre que $\tup{\mathbb{B}^*, \;\!\cdot\;, \lambda}$ é um monóide.
+\end{exercise}
+
+\begin{exercise}
+	Tome $\phi : \mathbb{B}^* \to \nats$ dado por
+	\begin{enumerate}
+		\item $\phi(\lambda) = 0$
+		\item $\phi(w0) = w + w$
+		\item $\phi(w1) = w + w + 1$
+	\end{enumerate}
+	Determine se $\phi$ é um homomorfismo de monóides de $\tup{\mathbb{B}^*, \;\!\cdot\;, \lambda}$ em $\tup{\nats, +, 0}$.
+\end{exercise}
+
+\begin{exercise}
+	Sejam $\tup{G, \cdot_{\scriptscriptstyle G}}$ e $\tup{H, \cdot_{\scriptscriptstyle H}}$ dois grupos.
+	\begin{itemize}
+		\item Mostre que o conjunto dado pelo produto cartesiano $G \times H$ com a operação
+		$(g_1, h_1) \cdot (g_2, h_2) = (g_1 \cdot_{\scriptscriptstyle G} g_2, h_1 \cdot_{\scriptscriptstyle H} h_2)$
+		também é um grupo.
+
+		\item Mostre que existe um subgrupo de $G \times H$ isomórfico a $G$.
+		(São duas tarefas: a primeira é mostrar que o subconjunto encontrado é um subgrupo; a segunda é mostrar que esse subgrupo é isomórfico a $G$)
+	\end{itemize}
+\end{exercise}
+
+\begin{exercise}
+	Seja $\mathcal{G} = \tup{G, \;\cdot\;, e, {}^{-1}}$ um grupo. Defina uma nova operação $\cdot^{op} : G \times G \to G$ tal que $x \cdot^{op} y = y \cdot x$.
+	Mostre que $\mathcal{G}^{op} = \tup{G, \cdot^{op}, e, {}^{-1}}$ é um grupo, e que é isomórfico a $\mathcal{G}$. 
+\end{exercise}
