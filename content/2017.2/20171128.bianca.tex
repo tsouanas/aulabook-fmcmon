@@ -1,0 +1,42 @@
+\begin{definition}[Adição e Multiplicação]
+	A função de adição nos números naturais é definida pela recursão
+	$$
+		\begin{aligned}
+			n + 0 &= n, && \text{(a1)}\\
+			n + (Sm) &= S(n + m). && \text{(a2)}
+		\end{aligned}
+	$$
+	e a multiplicação é definida em seguida, usando adição, pela recursão
+	$$
+		\begin{aligned}
+			n \cdot 0 &= 0, && \text{(m1)}\\
+			n \cdot Sm &= (n \cdot m) + n. && \text{(m2)}
+		\end{aligned}
+	$$
+\end{definition}
+
+\begin{exercise}
+\topic{naturais!Peano}
+	Prove que adição é associativa, ou seja, satisfaz a identidade
+	$$
+		(n + m) + k = n + (m + k).
+	$$
+\end{exercise}
+
+\begin{exercise}
+\topic{naturais!Peano}
+	Mostre que, para todo natural $n$, $0 + n = n$.
+\end{exercise}
+
+\begin{exercise}
+\topic{naturais!Peano}
+	Prove que, para todos $n, m$, $n + Sm = Sn + m$.
+\end{exercise}
+
+\begin{exercise}
+\topic{naturais!Peano}
+	Prove que adição é comutativa, ou seja, satisfaz a identidade
+	$$
+		n + m = m + n.
+	$$
+\end{exercise}
