@@ -1,0 +1,54 @@
+\begin{exercise}
+\topic{indução} 
+	Exponenciação nos números naturais é definida pela seguinte recursão no $m$:
+	$$
+		\begin{aligned}
+			n^0 &= 1, && (e1)\\
+			n^{Sm} &= n^m \cdot n. && (e2)
+		\end{aligned}
+	$$
+	Mostre que ela satisfaz as seguintes identidades (para $n \neq 0$):
+	$$
+		\begin{aligned}
+			n^{(m + k)} &= m^m \cdot n^k,\\
+			n^{(m \cdot k)} &= (n^{m})^k.
+		\end{aligned}
+	$$
+\end{exercise}
+
+\begin{exercise}
+\topic{recursão}
+	Defina recursivamente o fatorial
+	$$
+		f(n) = 1 \cdot 2 \cdots (n -1) \cdot n.
+	$$
+\end{exercise}
+
+\begin{exercise}
+\topic{naturais!peano}
+	Suponha que $(\nats_1, 0_1, S_1)$ e $(\nats_2, 0_2, S_2)$ são dois sistemas Peano, $+_1, \cdot_1, +_2, \cdot_2$ são as funções de adição e multiplicação nesses sistemas, e $\pi : \nats_1 \bijto \nats_2$ é o isomorfismo ``canônico'' entre eles definido por
+	$$
+		\begin{aligned}
+			\pi(0_1) &= 0_2,\\
+			\pi(S_1n) &= S_2\pi(n) \ (n \in \nats_1).
+		\end{aligned}
+	$$
+	Mostre que $\pi$ é um isomorfismo com respeito à adição e também à multiplicação, ou seja, para todos $n, m \in \nats_1$,
+	$$
+		\pi(n +_1 m) = \pi(n) +_2 \pi(m),\ \pi(n \cdot_1 m) = \pi(n) \cdot_2 \pi(m).
+	$$
+\end{exercise}
+
+\begin{definition}
+	A relação de ordem $\leq$ nos números naturais é definida pela equivalência
+	$$
+		n \leq m \iffdf (\exists s)[n + s = m].
+	$$
+\end{definition}
+
+\begin{exercise}
+	Suponha que $(\nats_1, 0_1, S_1)$ e $(\nats_2, 0_2, S_2)$ são dois sistemas Peano, $\leq_1, \leq_2$ são as respectivas boas ordens e $\pi : \nats_1 \bijto \nats_2$ é o isomorfismo canônico. Mostre que $\pi$ é ordem-preservante, ou seja, para todos $n, m \in \nats_1$,
+	$$
+		n \leq_1 m \iff \pi(n) \leq_2 \pi(m).
+	$$
+\end{exercise}
