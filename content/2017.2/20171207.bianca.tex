@@ -1,0 +1,69 @@
+\begin{definition}
+	Um conjunto estruturado $\mathcal{L} = \sset L {\vee, \wedge}$ é um lattice sse para todo $a, b, c \in L$:
+	$$
+		\left.
+			\begin{aligned}
+				&\text{(Ass1)}\\
+				&\text{(Ass2)}\\
+				&\text{(Com1)}\\
+				&\text{(Com2)}
+			\end{aligned}
+		\right.
+		\qquad
+		\left.
+			\begin{aligned}
+				a \vee (b \vee c) &= (a \vee b) \vee c\\
+				a \wedge (b \wedge c) &= (a \wedge b) \wedge c\\
+				a \vee b &= b \vee a\\
+				a \wedge b &= b \wedge a
+			\end{aligned}
+		\right.
+		\qquad
+		\left.
+			\begin{aligned}
+				a \vee a &= a\\
+				a \wedge a &= a\\
+				(a \vee b) \wedge a &= a\\
+				(a \wedge b) \vee a &= a
+			\end{aligned}
+		\right.
+		\qquad
+		\left.
+			\begin{aligned}
+				\text{(Idem1)}\\
+				\text{(Idem2)}\\
+				\text{(Abs1)}\\
+				\text{(Abs2)}
+			\end{aligned}
+		\right.
+	$$
+\end{definition}
+
+\begin{exercise}
+\topic{latiices}
+	Seja $\mathcal{L} = \sset L {\vee, \wedge}$ um lattice. Prove que:
+	\begin{enumerate}[(i)]
+		\item $a \vee b = b \iff a \wedge b = a$
+		\item Defina $\leq$ no $L$ por $a \leq b$ se $a \vee b = b$. Então $\leq$ é uma relação de ordem.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+\topic{lattices}
+	Seja $\mathcal{L} = \sset L \leq$ um poset tal que $\bigwedge H$ existe para todo $H \subseteq L$. Mostre que $\mathcal{L}$ é um lattice.
+\end{exercise}
+
+\begin{exercise}
+\topic{lattices}
+	Prove que podemos inferir as leis (Idem1)-(Idem2) pelas outras.
+\end{exercise}
+
+\begin{exercise}
+\topic{posets}
+	Sejam P e Q posets finitos e seja ${\varphi}:P \bijto Q$ um mapeamento bijetivo. Então, os seguintes são equivalentes:
+	\begin{enumerate}[(i)]
+		\item $\varphi$ é um isomorfismo de ordem;
+		\item $x < y$ em $P$ se e somente se $\varphi(x) < \varphi(y)$ em $Q$;
+		\item $x \covby y$ em $P$ se e somente se $\varphi(x) \covby \varphi(y)$ em $Q$.
+	\end{enumerate}
+\end{exercise}
