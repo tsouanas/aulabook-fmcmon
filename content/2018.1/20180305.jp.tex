@@ -1,0 +1,44 @@
+\begin{definition}[Naturais]
+\topic{naturals!peano}
+\topic{bnf}
+Definimos o conjunto dos naturais recursivamente, da seguinte forma:
+ $ \tup{\textbf{Nat}} \;::=\; O \;\; \vert \;\; S \; \tup{\textbf{Nat}} $
+\end{definition}
+
+\begin{exercise}
+\topic{naturals!peano}
+\topic{recursion}
+Defina a operação de adição sobre os números naturais como definidos acima.
+\end{exercise}
+
+\begin{exercise}
+\topic{induction}
+Demonstre que a adição definida no exercício anterior é associativa.
+Isso é, mostre que para todo $m, n, p$ naturais, $m + (n + p) = (m + n) + p$.
+\end{exercise}
+
+\begin{definition}[Lema 1 da adição]
+	\label{lema12018}
+	Para todo $n$ natural, $n + 0 = n$.
+\end{definition}
+
+\begin{definition}[Lema 2 da adição]
+	\label{lema22018}
+	Para todo $m, n$ naturais, $S(m + n) = m + Sn$.
+\end{definition}
+
+\begin{homework}
+\topic{induction}
+Demonstre \ref{lema12018} (p.~\pageref{lema12018}) e \ref{lema22018} (p.~\pageref{lema22018}).
+\end{homework}
+
+\begin{exercise}
+\topic{induction}
+\topic{lemmas}
+Demonstre que a adição é comutativa (ou seja, que para todo $m, n$ naturais, $m + n = n + m$).
+Use coisas que demonstramos anteriormente.
+\end{exercise}
+
+\begin{homework}
+Defina a multiplicação, e prove sua associatividade e comutatividade
+\end{homework}
