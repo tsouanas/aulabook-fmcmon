@@ -1,0 +1,77 @@
+\begin{exercise}
+\topic{indução}
+	Algumas definições de funções recursivas são:
+	$$
+		\left.
+			\begin{aligned}
+				x + 0 = x \quad \text{(a1)}\\
+				x + Sy = S(x + y) \quad \text {(a2)}
+			\end{aligned}
+		\right.
+		\qquad
+		\left.
+			\begin{aligned}
+				x \cdot 0 = 0 \quad \text{(m1)}\\
+				x \cdot Sy = (x \cdot y) + x \quad \text{(m2)}
+			\end{aligned}
+		\right.
+	$$
+	$$
+		\left.
+			\begin{aligned}
+				x^0 = S0 \quad \text{(e1)}\\
+				x^{Sy} = x^y \cdot x \quad \text{(e2)}
+			\end{aligned}
+		\right.
+	$$
+    Dados os lemas:
+    $$
+		\left.
+			\begin{aligned}
+			    a + b = b + a \qquad \text{(a-com)}\\
+			    a \cdot (b \cdot c) = (a \cdot b) \cdot c \qquad \text{(m-ass)}
+			\end{aligned}
+		\right.
+	$$
+    prove por indução as seguintes propriedades, indicando para cada passo o que foi usado:
+	$$
+		\text{(i)}
+			\quad a \cdot S0 = a
+			\qquad
+			\text{(ii)}
+				\quad a^{x + y} = a^x \cdot a^y
+			\qquad
+			\text{(iii)}
+				\quad a^{x \cdot y} = (a^x)^{y}.
+	$$
+\end{exercise}
+
+\begin{exercise}
+\topic{indução}
+	Prove que para todo inteiro positivo $n$, uma grid de $2^n$ x $2^n$ com qualquer um dos quadrados removidos pode ser coberto por peças em forma de L.
+\end{exercise}
+
+\begin{exercise}
+\topic{indução}
+	Use indução para mostrar que para todo $n \geq 1$
+	$$
+	n! \geq 2^{n - 1} 
+	$$
+\end{exercise}
+
+\begin{exercise}
+\topic{indução}
+	Suponha as propriedades de adição para os números naturais, mas que multiplição não é conhecida. Então, o seguinte pode ser usado como uma definição recursiva de multiplicação:
+	$$
+		1 \cdot b = b \quad \text{(i)}
+	$$
+	$$
+		(a + 1) \cdot b = a \cdot b + b \quad \text{(ii)}
+	$$
+	Prove o seguinte:
+	\begin{enumerate}[(a)]
+		\item $a \cdot (b + c) = a \cdot b + a \cdot c$
+		\item $a \cdot 1 = a$
+		\item $a \cdot b = b \cdot a$
+	\end{enumerate}
+\end{exercise}
