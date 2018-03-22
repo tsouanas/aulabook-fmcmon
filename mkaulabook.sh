@@ -56,10 +56,14 @@ for sem in $CONTENTDIR/$SEMESTERPATTERN; do
         lessonm=`echo $lessondir | cut -b '5-6'`
         lessond=`echo $lessondir | cut -b '7-8'`
         lessondate="${lessond}/${lessonm}/${lessony}"
-        echo -n "\\\\begin{$teacher}" >> $AULALIST
+        # XXX hack to avoid linuxism of bash pretending to be sh
+        echo -n "\\" >> $AULALIST
+        echo -n "begin{$teacher}" >> $AULALIST
         echo    "{$lessondate}"       >> $AULALIST
-        echo    "\\\\input{$aula}"    >> $AULALIST
-        echo    "\\\\end{$teacher}"   >> $AULALIST
+        echo -n "\\" >> $AULALIST
+        echo    "input{$aula}"    >> $AULALIST
+        echo -n "\\" >> $AULALIST
+        echo    "end{$teacher}"   >> $AULALIST
     done
 
 done
