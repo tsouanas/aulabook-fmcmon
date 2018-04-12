@@ -1,0 +1,43 @@
+\begin{definition}[Isomorfismo]
+\label{defiso}
+    Uma função $f : A \to B$ é dita um isomorfismo se existe uma função $g : A \to B$ tal que:
+    $$
+        \begin{aligned}
+            g \fcompose f = \text{id}_A\\
+            f \fcompose g = \text{id}_B
+        \end{aligned}
+    $$
+\end{definition}
+
+\begin{definition}[Inversa]
+    Uma função $g$ relacionada a $f$ satisfazendo as equações do \ref{defiso} é chamada uma inversa de $f$.
+\end{definition}
+
+\begin{exercise}
+\topic{funções}
+    Mostre que:
+    \begin{enumerate}[(a)]
+        \item Mostre que id$_A$ é um isomorfismo.
+        \item Mostre que se $f : A \to B$ é um isomorfismo, e $g : B \to A$ é uma inversa de $f$, então $g$ também é um isomorfismo.
+        \item Mostre que se $f : A \to B$ e $k : B \to C$ são isomorfismos, $k \fcompose f : A \to C$ também é um isomorfismo.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+\topic{funções}
+    Suponha que $g : B \to A$ e $k : B \to A$ são ambas inversas de $f : A \to B$. Mostre que $g = k$.
+\end{exercise}
+
+\begin{exercise}
+\topic{funções}
+    Se $f$ tem uma inversa, então $f$ satisfaz as duas leis de cancelamento:
+    \begin{enumerate}[(a)]
+        \item Se $f \fcompose h = f \fcompose k$, então $h = k$
+        \item Se $h \fcompose f = k \fcompose f$, então $h = k$
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+\topic{funções}
+    Mostre que em geral não podemos afirmar que se $h \fcompose f = f \fcompose k$, então $h = k$.
+\end{exercise}
