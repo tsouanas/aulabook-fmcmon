@@ -1,0 +1,61 @@
+\begin{definition}
+    Se $f : A \to B$:
+
+    Uma retração de $f$ é uma função $r : B \to A$ tal que $r \fcompose f = \text{id}_A$.
+
+    Uma seção de $f$ é uma função $s : B \to A$ tal que $f \fcompose s = \text{id}_B$.
+\end{definition}
+
+\begin{exercise}
+\topic{funções}
+    Se uma função $f : A \to B$ tem uma seção, então, para todo $T$ e para toda função $y : T \to B$, existe uma função $x : T \to A$ tal que $f \fcompose x = y$.
+\end{exercise}
+
+\begin{exercise}
+\topic{funções}
+    Se a função $f : A \to B$ tem uma retração, então, para toda função $g : A \to T$, existe uma função $t : B \to T$ tal que $t \fcompose f = g$.
+\end{exercise}
+
+\begin{exercise}
+\topic{funções}
+    Suponha que uma função $f : A \to B$ tem uma retração. Então, para qualquer conjunto $T$ e para qualquer par de funções $x_1 : T \to A$, $x_2 : T \to A$ de qualquer conjunto $T$ para $A$: se $f \fcompose x_1 = f \fcompose x_2$ então $x_1 = x_2$.
+\end{exercise}
+
+\begin{exercise}
+\topic{funções}
+    Se a função $f : A \to B$ tem uma retração, então $f$ é injetora.
+\end{exercise}
+
+\begin{homework}
+\topic{funções}
+    Suponha que a função $f : A \to B$ tem uma seção, Então, para qualquer conjunto $T$ e qualquer par $t_1 : B \to T$, $t_2 : B \to T$ de funções de $B$ para $T$, se $t_1 \fcompose f = t_2 \fcompose f$ então $t_1 = t_2$.
+\end{homework}
+
+\begin{exercise}
+\topic{funções}
+    Se a função $f : A \to B$ tem uma seção, então $f$ é sobrejetiva.
+\end{exercise}
+
+\begin{exercise}
+\topic{funções}
+    Se $f : A \to B$ tem uma retração e se $g : B \to C$ tem uma retração, então $g \fcompose f : A \to C$ tem uma retração.
+\end{exercise}
+
+\begin{homework}
+\topic{funções}
+    Prove que a composição de duas funções, cada uma tendo seções tem, também, uma seção.
+\end{homework}
+
+\begin{definition}[Função idempotente]
+    Uma função $f : A \to A$ é chamada de idempotente se $f \fcompose f = f$
+\end{definition}
+
+\begin{exercise}
+\topic{funções}
+   Suponha que $r$ é uma retração de $f$ (equivalentemente, $f$ é uma seção de $r$) e seja $e = f \fcompose r$. Mostre que $e$ é idempotente. Mostre que se $f$ é um isomorfismo, então $e$ é a identidade. 
+\end{exercise}
+
+\begin{exercise}
+\topic{funções}
+    Se $f$ tem tanto uma retração $r$ quanto uma seção $s$ então $r = s$.
+\end{exercise}
