@@ -13,12 +13,15 @@ by other similar projects.
 
 * Thanos Tsouanas (supervisor)
 * Bianca Rodrigues Cesarino (TA)
+* João Pedro Holanda (TA)
+* Josenaldo Júnior (TA)
 * Victor Rafael Santos Silva (TA)
 
 
 ## Class content 
 
 * Bianca Rodrigues Cesarino
+* João Pedro Holanda (TA)
 * Victor Rafael Santos Silva
 
 
@@ -29,20 +32,23 @@ For each lesson, place two files under `content/YYYY.N`:
     YYYYMMDD.yourname.tex
     YYYYMMDD.yourname.stu
 
-where `YYYYMMDD` is the date the lesson takes place,
+and each non-lesson session, place one file under the same dir:
+
+    YYYYMMDD.stu
+
+Here `YYYYMMDD` is the date the lesson/session took place,
 `yourname` is your handle, and `YYYY.N` is the semester.
 (Patterns are customizable.)
 
 * The `.tex` file is a LaTeX file with the contents of that class.
 * The `.stu` file is a plain text file with the names of the students.
-  One name per line, no blank lines.)
+  (One name per line, no blank lines.)
 
 For example, for a class given on 18/05/2017 by Bianca on 2017.1,
 she will create the following two files:
 
 * `content/2017.1/20170518.bianca.tex`
 * `content/2017.1/20170518.bianca.stu`
-
 
 ## Requirements
 
