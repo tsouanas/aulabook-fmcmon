@@ -15,7 +15,7 @@ for stu in $CONTENTDIR/*/*.*.stu; do
     cat $stu >> $TMPSTU
 done
 attcount=`cat $TMPSTU| wc -l | awk '{ print $1 }'`
-stucount=`cat $TMPSTU|sort|uniq| wc -l | awk '{ print $1 }'`
+stucount=`sort $TMPSTU|uniq| wc -l | awk '{ print $1 }'`
 echo "$stucount students have attended our classes so far, $attcount times in total." | tee -a $REPORTOUT
 rm -f $TMPSTU
 
@@ -29,7 +29,7 @@ for teacher in $teachers; do
         cat $stu >> $TMPSTU
     done
     attcount=`cat $TMPSTU | wc -l | awk '{ print $1 }'`
-    stucount=`cat $TMPSTU |sort|uniq| wc -l | awk '{ print $1 }'`
+    stucount=`sort $TMPSTU|uniq| wc -l | awk '{ print $1 }'`
     echo "${teacher}: $stucount students, $attcount times in total." | tee -a $REPORTOUT
     rm -f $TMPSTU
 done
@@ -40,7 +40,7 @@ for stu in $CONTENTDIR/*/????????.stu; do
     cat $stu >> $TMPSTU
 done
 attcount=`cat $TMPSTU| wc -l | awk '{ print $1 }'`
-stucount=`cat $TMPSTU|sort|uniq| wc -l | awk '{ print $1 }'`
+stucount=`sort $TMPSTU|uniq| wc -l | awk '{ print $1 }'`
 echo "$stucount students have been attended during our office hours so far, $attcount times in total." | tee -a $REPORTOUT
 rm -f $TMPSTU
 
