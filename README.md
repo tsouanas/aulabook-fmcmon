@@ -12,16 +12,21 @@ by other similar projects.
 ## Projeto de monitoria FMC @IMD, UFRN
 
 * Thanos Tsouanas (supervisor)
-* Bianca Rodrigues Cesarino (TA)
-* João Pedro Holanda (TA)
-* Josenaldo Júnior (TA)
-* Victor Rafael Santos Silva (TA)
+* Bianca Rodrigues Cesarino
+* Giordano Rodrigues
+* João Pedro de Amorim Paula
+* Josenaldo Júnior
+* João Pedro Holanda [2017.2–2018.1]
+* Victor Rafael Santos Silva [2017.1]
 
 
 ## Class content 
 
 * Bianca Rodrigues Cesarino
-* João Pedro Holanda (TA)
+* Giordano Rodrigues
+* João Pedro de Amorim Paula
+* João Pedro Holanda
+* Josenaldo Júnior
 * Victor Rafael Santos Silva
 
 
