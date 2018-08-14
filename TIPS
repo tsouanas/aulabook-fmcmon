@@ -17,8 +17,8 @@ TIPS
    \topic{set theory}%
    \topic{cardinality}%
 
-4. Define your personal macros in a the file TEACHERmac.tex,
-   where TEACHER is your teacher handle.
+4. Define your personal macros in the file TEACHERmac.tex,
+   where TEACHER is your teacher handle, and put it inside content/.
    These macros will only be available to YOUR lesson files.
 
 5. Define general math macros in mathmac.tex.
