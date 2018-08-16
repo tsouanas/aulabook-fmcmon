@@ -1,0 +1,38 @@
+\begin{definition}[Adição]
+	A função de adição nos números naturais é definida pela recursão
+	$$
+		\begin{aligned}
+			n + 0 &= n, && \text{(a1)}\\
+			n + (Sm) &= S(n + m). && \text{(a2)}
+		\end{aligned}
+	$$
+\end{definition}
+
+\begin{exercise}
+\topic{indução}
+	Prove que adição é associativa, ou seja, satisfaz a identidade
+	$$
+		(a + b) + c = a + (b + c).
+	$$
+\end{exercise}
+
+\begin{exercise}
+\topic{indução}
+	Prove que adição é comutativa, ou seja, satisfaz a identidade
+	$$
+		a + b = b + a.
+	$$
+\end{exercise}
+
+\begin{exercise}
+\topic{lógica!primeira ordem}
+    O que as afirmações seguintes significam? Elas são verdadeiras ou falsas? (O universo é $\nats$).
+    \begin{enumerate}[(a)]
+        \item $\forall x \exists y (x < y)$
+        \item $\exists y \forall x (x < y)$
+        \item $\exists x \forall y (x < y)$
+        \item $\forall y \exists x (x < y)$
+        \item $\exists x \exists y (x < y)$
+        \item $\forall x \forall y (x < y)$
+    \end{enumerate}
+\end{exercise}
