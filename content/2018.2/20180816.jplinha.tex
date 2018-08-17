@@ -1,0 +1,42 @@
+\begin{definition}[Adição sobre $\tup{\textbf{Nat}}$]
+    \topic{naturais}%
+    \topic{recursão}%
+    Definimos a operação de adição sobre o $\tup{\textbf{Nat}}$, definido
+    anteriormente, da seguinte forma:
+    \begin{align*}
+        &n + 0 = n\tag{a1} \\
+        &n + Sm = S(n + m)\tag{a2}
+    \end{align*}
+
+\end{definition}
+
+\begin{exercise}
+    \topic{naturais}%
+    \topic{indução}%
+    Prove que a adição sobre $\tup{\textbf{Nat}}$ é comutativa, isto é
+    $$ (\forall n, m \in \tup{\textbf{Nat}})[n + m = m + n] $$
+
+\end{exercise}
+
+\begin{homework}
+    \topic{naturais}%
+    \topic{recursão}%
+    \begin{definition}[Multiplicação sobre $\tup{\textbf{Nat}}$]
+        Definimos a operação de multiplicação sobre o $\tup{\textbf{Nat}}$
+        através das seguintes equações:
+        \begin{align*}
+            &n \cdot 0 = n\tag{m1} \\
+            &n \cdot Sm = S(n \cdot m) + n\tag{m2}
+        \end{align*}
+
+    \end{definition}
+
+    Dado a definição de multiplicação sobre $\tup{\textbf{Nat}}$ acima,
+    prove que ela é
+
+    \begin{enumerate}[(i)]
+        \item Distributiva
+        \item Associativa
+        \item Comutativa
+    \end{enumerate}
+\end{homework}
