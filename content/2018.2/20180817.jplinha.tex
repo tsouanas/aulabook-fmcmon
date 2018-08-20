@@ -1,0 +1,32 @@
+\begin{definition}[Multiplicação sobre $\tup{\textbf{Nat}}$]
+    Definimos a operação de multiplicação sobre o $\tup{\textbf{Nat}}$
+    através das seguintes equações:
+    \begin{align*}
+        &n \cdot 0 = n\tag{m1} \\
+        &n \cdot Sm = S(n \cdot m) + n\tag{m2}
+    \end{align*}
+
+\end{definition}
+
+\begin{exercise}
+    \topic{naturais}%
+    \topic{recursão}% 
+    Mostre que a multiplicação como definida acima é
+    \begin{enumerate}[(i)]
+        \item Distributiva
+        \item Associativa
+        \item Comutativa
+    \end{enumerate}
+\end{exercise}
+
+\begin{homework}[Lema $\alpha$]
+    Prove que
+
+    $$ (\forall m \in \tup{\textbf{Nat}})[0 \cdot m = 0] $$
+\end{homework}
+
+\begin{homework}[Lema $\beta$]
+    Prove que
+
+    $$ (\forall n,m \in \tup{\textbf{Nat}})[Sn \cdot m = (n \cdot m) + m] $$
+\end{homework}
