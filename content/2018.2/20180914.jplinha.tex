@@ -1,0 +1,50 @@
+\begin{exercise}
+    \topic{funções!injetividade}%
+    \topic{funções!sobrejetividade}%
+    Defina as funções $f$ e $g$ com os seguintes tipos
+    \begin{align*}
+        f : A \injto \pset A \\
+        g : \pset A \surjto A
+    \end{align*}
+    Sabendo que $A \not= \emptyset$, prove as seguintes afirmações:
+    \begin{enumerate}[(i)]
+        \item A $f$ é injetiva.
+        \item A $f$ não é sobrejetiva.
+        \item A $g$ é sobrejetiva.
+        \item A $g$ não é injetiva.
+    \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+    \topic{funções!pré-imagem}%
+    Sejam $f: A \to A$. O $x \in A$ é um \emph{fixpoint} (ponto fixo) da $f$ sse
+    $f(x) = x$. Seja $F$ o conjunto de todos os \emph{fixpoints} de $f$ definido
+    abaixo
+    $$
+    F = \setstt{x \in A}{$x$ é um fixpoint da $f$}
+    $$
+    Prove a (i) e refute a (ii)
+    \begin{enumerate}[(i)]
+        \item $F \subseteq \inv f[F]$
+        \item $\inv f[F] \subseteq F$
+    \end{enumerate}
+    Agora, supondo que $f$ é injetiva, prove a (ii).
+\end{exercise}
+
+\begin{exercise}
+    \topic{funções!imagem}%
+    \topic{funções!pré-imagem}%
+    Sejam $f: A \to B$, e duas famílias indexadas de conjuntos $(A_i)_{i \in I}$
+    feita por subconjuntos de A e $(B_j)_{j \in J}$ feita de subconjuntos de B.
+    Ou seja, para todo $i \in I$, e para todo $j \in J$, temos $A_i \subseteq A$
+    e $B_j \subseteq B$. Mostre que
+    \begin{enumerate}[(1)]
+        \item $f[\Union_{i \in I} A_i] = \Union_{i \in I} f[A_i]$
+        \item $f[\Inter_{i \in I} A_i] \askeq \Inter_{i \in I} f[A_i]$
+        \item $\inv f[\Union_{j \in J} B_j] = \Union_{j \in J} \inv f[B_j]$
+        \item $\inv f[\Inter_{j \in J} B_j] = \Inter_{j \in J} \inv f[B_j]$
+    \end{enumerate}
+    Onde aparece $\askeq$ prove que a igualdade em geral não é válida, mas umas
+    das $(\subseteq)$ e $(\supseteq)$ é. Prove-a, e, supondo que $f$ é
+    injetora, prove a outra também.
+\end{exercise}
