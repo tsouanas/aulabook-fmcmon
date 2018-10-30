@@ -1,19 +1,24 @@
 \begin{exercise}
-\topic{teoria de números}%
+\topic{teoria de números!divisibilidade}%
 	Sejam $a,b,c \in \nats$, demonstre que
 	$$a \divides b \mland a \divides c \implies a \divides bx + cy \text{ para quaisquer } x,y \in \ints$$
 \end{exercise}
 
-\begin{exercise}
-\topic{conjuntos}%
+\begin{definition}[Máximo Divisor Comum]
 \topic{teoria de números!mdc}%
-	Recorde a definição de $mdc$:
-	$$
-	mdc(a,b) = m \iffdf m \divides a \mland m \divides b \mland (\forall n \in \nats)[ n \divides a \mland n \divides b \implies n \divides m]
-	$$
-	Seja $a \in \nats$, demonstre que valem os seguintes itens:
+	Considere $a$, $b$ e $d\in \ints$, defina $mdc(a,b) = d$ se, e somente se:
 	\begin{enumerate}[(i)]
+		\item $d \geq 0$ (não negativo)
+		\item $d \divides a \mland d \divides b$ (divisor comum)
+		\item $(\forall n \in \nats)[ (n \divides a \mland n \divides b) \implies n \divides d ]$ (maior em relação à divisibilidade)
+	\end{enumerate}
+\end{definition}
+
+\begin{exercise}
+\topic{teoria de números!mdc}%
+	Seja $a \in \nats$, demonstre que valem os seguintes itens:
+	\begin{enumerate}[(a)]
 		\item $mdc(a,a) = a$
-		\item $a \neq 0 \implies mdc(0,a) = a$
+		\item $mdc(0,a) = a$
 	\end{enumerate}
 \end{exercise}
