@@ -1,0 +1,29 @@
+\begin{definition}
+Dados $f: A \to B$ e $x \in A$, $x$ é um ponto fixo de $f$ se $f(x)=x$.
+\end{definition}
+
+\begin{definition}
+Dada $f: A \to A$, definem-se as iterações $f^n$ como:
+%
+\begin{gather*}
+f^0 = id_A\\
+f^{n+1} = f \circ f^n
+\end{gather*}
+
+\end{definition}
+
+\begin{exercise}
+Sejam $f: A \to A$ e $x \in A$. Prove que:
+
+\begin{center}
+        $x$ é ponto fixo de $f$ $\iff$ para todo $n \in \nats$, $x$ é ponto fixo de $f^n$
+    \end{center}
+\end{exercise}
+
+\begin{exercise}   
+    Seja $f: \nats \to \nats$. Prove que:
+
+    \begin{center}
+        $f$ é sobrejetiva $\iff$ existe $g: \nats \to \nats$ tal que $f \circ g = id_A$
+    \end{center}
+\end{exercise}
