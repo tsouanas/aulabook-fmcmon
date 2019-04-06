@@ -1,0 +1,41 @@
+\begin{definition}
+    Dados $A$ e $B$ conjuntos, e $R$ e $S$ relações de $A$ para $B$, definem-se:
+    
+        $$R \le S \reldef (\forall a \in A )(\forall b \in B )[a \mathrel R b \implies  a \mathrel S b]$$
+        $$\text{Dom}(R) \eqdef \set{a \in A \mid \text{existe $b \in B$ tal que $a \mathrel R b$}}$$
+        $$\text{Ran}(R) \eqdef \set{b \in B \mid \text{existe $a \in A$ tal que $a \mathrel R b$}}$$
+    
+\end{definition}
+
+\begin{exercise}
+    \label{exe:04052019_1}
+    Dados $A$ e $B$ conjuntos, e $R$ uma relação de $A$ para $B$, prove que $\text{Dom}(R) \subseteq \text{Ran}(R^{\partial})$.
+\end{exercise}
+
+\begin{homework}
+    Prove a inclusão contrária no Exercício \ref{exe:04052019_1}.
+\end{homework}
+
+\begin{exercise}
+    \label{exe:04052019_2}
+    Sejam $A$ e $B$ conjuntos, e $R$ e $S$, relações de $A$ para $B$. Mostre que: $$R \le S \iff R^{\partial} \le S^{\partial}$$
+\end{exercise}
+
+\begin{homework}
+    No contexto do Exercício \ref{exe:04052019_2}, prove que $R^{\partial} \le S^{\partial} \iff R \le S$.
+\end{homework}
+
+\begin{definition}
+    Dados $A$ e $B$ conjuntos, define-se a relação $0_{A, B}$ de $A$ para $B$ tal que, para todos $a \in A$ e $b \in B$,
+    $$0_{A, B}(a,b) \reldef a \ne a$$
+\end{definition}
+
+\begin{exercise}
+\label{exe:04052019_3}
+    Sejam $A$, $B$ e $C$ conjuntos, e $R$ e $S$ relações de $A$ para $B$ e $B$ para $C$, respectivamente. Prove que:
+    $$\text{Ran}(R) \cap \text{Dom}(S) = \emptyset \implies R \rcom S = 0_{A,C}$$
+\end{exercise}
+
+\begin{homework}
+    Prove a afirmação conversa do Exercício \ref{exe:04052019_3}.
+\end{homework}
