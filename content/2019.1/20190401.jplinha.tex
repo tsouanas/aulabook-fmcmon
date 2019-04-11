@@ -1,0 +1,26 @@
+\begin{definition}
+    Definimos os \emph{numerais} \texttt{Nat} para representar os números 
+    naturais com uma definição indutiva:
+
+    \begin{itemize}
+        \item 0 é um \texttt{Nat};
+        \item Se $n$ é um \texttt{Nat}, então $Sn$ é um \texttt{Nat};
+        \item Nada mais é \texttt{Nat}.
+    \end{itemize}
+
+    Alternativamente, podemos usar a notação BNF para definir o \texttt{Nat} como
+    segue:
+    $$
+    \tup{\texttt{Nat}} \mathrel{::=} 0\ |\ S\tup{\texttt{Nat}}
+    $$
+\end{definition}
+
+\begin{exercise}
+    Defina recursivamente as operações de adição e multiplicação no \texttt{Nat}.
+\end{exercise}
+
+\begin{exercise}
+    Descreva formalmente (com fórmulas de lógica), o que significa afirmar que a
+    adição (definida no exercício anterior) é associativa e em seguida demonstre
+    que ela realmente é.
+\end{exercise}
