@@ -1,0 +1,133 @@
+#!/bin/sh
+#
+# Generate the YYYYMMDD.teacher.stu
+#
+# author: João Pedro de A. Paula <jpedrodeamorim@gmail.com>
+b=`tput bold`
+n=`tput sgr0`
+u=`tput smul`
+usage () {
+    echo "usage: gstu [-ces] [-d date] [-m teacher] [students ...]
+
+  ${b}-c$n          Show the content of the .stu file with the specified date and
+              teacher. If a teacher or date was specified, use them.
+
+  ${b}-d$n ${u}date$n     Specify the date. If no date is specified, the current date is
+              used.
+
+  ${b}-e$n          Edit the exercise file. This need to have a teacher specified
+              using the ${b}-m$n flag. This works as intended with the ${b}-d$n flag.
+
+  ${b}-h$n          Show this help.
+
+  ${b}-m$n ${u}teacher$n  Specify the teacher. If no teacher is specified, it is assumed
+              that it is an \"advice and tips\" class and writes the output to
+              the YYYYMMDD.stu file.
+
+  ${b}-s$n          Show the content of the file containing all the students.
+
+  ${b}-v$n          Verbose.
+
+The [students ...] can be just a part of the name of the student, for example:
+
+    gstu hon
+
+  Matches all students with 'ohn' on their name, like John.
+
+    gstu -d 20190428 aria
+
+  Sets the date to 20190428 and matches Maria and other students with 'aria'.
+
+    gstu \"John Doe\" bar
+
+  Matches 'John Doe' and students with 'bar' on their name."
+}
+
+# today's date
+DATE=`date +%Y%m%d`
+
+# check in which semester we are
+if [ `date +%m` -gt 6 ]
+then
+    SEMESTER="2"
+else
+    SEMESTER="1"
+fi
+
+# initialize these variables with 0 to stop warnings and avoid uninted things
+VERBOSE=0
+CAT_STU=0
+EDIT_TEX=0
+
+# getopts loop
+# TODO: make a better verbose
+while getopts "cesvd:m:h?" opt
+do
+    case $opt in
+        c) CAT_STU=1 ;;
+        e) EDIT_TEX=1 ;;
+        d) DATE="$OPTARG" ;;
+        h) usage && exit 0 ;;
+        m) TEACHER="${OPTARG}." ;;
+        s) cat stu && exit 0 ;;
+        v) VERBOSE=1 ;;
+        ?) usage && exit 2 ;;
+    esac
+done
+
+shift $(($OPTIND-1))
+
+vecho () {
+    [ $VERBOSE -eq 1 ] && echo "$@"
+}
+
+# the file with the students for this class
+STUFILE="content/`date +%Y`.${SEMESTER}/${DATE}.${TEACHER}stu"
+
+# if the user asked to show the students file, cat it and exit
+[ $CAT_STU -eq 1 ] && cat $STUFILE && exit $?
+
+# if the user wants to edit the exercise file then check if the teacher is
+# empty; if it is, signal an error, this only works if the teacher was specified
+if [ $EDIT_TEX -eq 1 ]
+then
+    if [ -z "$TEACHER" ]
+    then
+        echo "Please specify a teacher to edit the exercise file."
+        exit 2
+    else
+        ${EDITOR:-vim} "content/`date +%Y`.${SEMESTER}/${DATE}.${TEACHER}tex"
+        exit $?
+    fi
+fi
+
+# if no student was specified, quit
+if [ $# -eq 0 ]
+then
+    usage
+    exit 1
+fi
+
+# start creating the grouping to search for students with the first argument
+# after the getopts loop and then shift to the next
+PATTERN="$1"
+shift
+
+# create the regular expression and print it if verbose is on
+for stu in "$@"
+do
+    PATTERN="${PATTERN}|$stu"
+done
+vecho "The complete regular expression pattern is ($PATTERN)."
+
+# store all found students in a variable
+STUDENTS=`cat stu | egrep "(${PATTERN})"`
+
+[ -z "$STUDENTS" ] && echo "No students found, specify valid ones." && exit 1
+
+echo "Found the following students:"
+echo "$STUDENTS"
+
+echo "\nMoving their registration to ${STUFILE}."
+
+cat stu | egrep "(${PATTERN})" | cut -d' ' -f1 >> $STUFILE
