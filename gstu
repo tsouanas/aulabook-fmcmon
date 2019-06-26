@@ -128,6 +128,6 @@ STUDENTS=`cat stu | egrep "(${PATTERN})"`
 echo "Found the following students:"
 echo "$STUDENTS"
 
-echo "\nMoving their registration to ${STUFILE}."
+echo "\nMoving their registration to '${STUFILE}'."
 
 cat stu | egrep "(${PATTERN})" | cut -d' ' -f1 >> $STUFILE

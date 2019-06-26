@@ -1,0 +1,23 @@
+\begin{definition}
+    Os n\'umeros de {\em Fibonacci} e os n\'umeros de {\em Lucas} s\~ao
+    definidos recursivamente como segue, respectivamente
+    \begin{align*}
+        F_0     &= 0             & L_0     &= 2 \\
+        F_1     &= 1             & L_1     &= 1 \\
+        F_{n+2} &= F_{n+1} + F_n & L_{n+2} &= L_{n+1} + L_n \\
+    \end{align*}
+\end{definition}
+
+\begin{exercise}
+    Definimos a fun{\c c}\~ao $l \colon \nats \setminus \{0\} \to \nats$ pela
+    equa{\c c}\~ao
+    $$
+    l(n)=F_{n-1}+F_{n+1}
+    $$
+    Demonstre, para todo $n \in \nats_{\geq 1}$, que $l(n)=L_n$.
+\end{exercise}
+
+\begin{exercise}
+    Sejam $a,b \in \ints$ e $k,m \in \nats_{>0}$, tal que $a \cong_m b$.
+    Demonstre que $a^k \cong_m b^k$.
+\end{exercise}
