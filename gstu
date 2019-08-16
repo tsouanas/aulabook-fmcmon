@@ -15,7 +15,7 @@ usage () {
   ${b}-d$n ${u}date$n     Specify the date. If no date is specified, the current date is
               used.
 
-  ${b}-e$n          Edit the exercise file. This need to have a teacher specified
+  ${b}-e$n          Edit the exercise file. This needs to have a teacher specified
               using the ${b}-m$n flag. This works as intended with the ${b}-d$n flag.
 
   ${b}-h$n          Show this help.
@@ -121,7 +121,7 @@ done
 vecho "The complete regular expression pattern is ($PATTERN)."
 
 # store all found students in a variable
-STUDENTS=`cat stu | egrep "(${PATTERN})"`
+STUDENTS=`cat stu | egrep -i "(${PATTERN})"`
 
 [ -z "$STUDENTS" ] && echo "No students found, specify valid ones." && exit 1
 
@@ -130,4 +130,4 @@ echo "$STUDENTS"
 
 echo "\nMoving their registration to '${STUFILE}'."
 
-cat stu | egrep "(${PATTERN})" | cut -d' ' -f1 >> $STUFILE
+cat stu | egrep -i "(${PATTERN})" | cut -d' ' -f1 >> $STUFILE
